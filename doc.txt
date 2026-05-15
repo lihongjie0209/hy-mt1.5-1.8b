@@ -1,0 +1,338 @@
+Hugging Face's logo
+Hugging Face
+Models
+Datasets
+Spaces
+Buckets
+new
+Docs
+Pricing
+
+Log In
+Sign Up
+AngelSlim
+/
+Hy-MT1.5-1.8B-1.25bit-GGUF 
+
+like
+38
+
+Follow
+AngelSlim
+209
+Translation
+GGUF
+multilingual
+hy-mt
+quant
+1.25bit
+sherry
+conversational
+
+arxiv:
+2601.07892
+
+arxiv:
+2512.24092
+
+arxiv:
+2602.21233
+Model card
+Files and versions
+xet
+Community
+1
+Instructions to use AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF with libraries, inference providers, notebooks, and local apps. Follow these links to get started.
+Libraries
+How to use AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF with llama-cpp-python:
+
+# !pip install llama-cpp-python
+
+from llama_cpp import Llama
+
+llm = Llama.from_pretrained(
+	repo_id="AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF",
+	filename="Hy-MT1.5-1.8B-1.25bit.gguf",
+)
+llm.create_chat_completion(
+	messages = "\"Меня зовут Вольфганг и я живу в Берлине\""
+)
+Notebooks
+Local Apps
+How to use AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF with llama.cpp:
+
+Install from brew
+brew install llama.cpp
+# Start a local OpenAI-compatible server with a web UI:
+llama-server -hf AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF
+# Run inference directly in the terminal:
+llama-cli -hf AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF
+Install from WinGet (Windows)
+winget install llama.cpp
+# Start a local OpenAI-compatible server with a web UI:
+llama-server -hf AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF
+# Run inference directly in the terminal:
+llama-cli -hf AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF
+Use pre-built binary
+# Download pre-built binary from:
+# https://github.com/ggerganov/llama.cpp/releases
+# Start a local OpenAI-compatible server with a web UI:
+./llama-server -hf AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF
+# Run inference directly in the terminal:
+./llama-cli -hf AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF
+Build from source code
+git clone https://github.com/ggerganov/llama.cpp.git
+cd llama.cpp
+cmake -B build
+cmake --build build -j --target llama-server llama-cli
+# Start a local OpenAI-compatible server with a web UI:
+./build/bin/llama-server -hf AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF
+# Run inference directly in the terminal:
+./build/bin/llama-cli -hf AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF
+Use Docker
+docker model run hf.co/AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF
+How to use AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF with Ollama:
+
+ollama run hf.co/AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF
+new
+How to use AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF with Unsloth Studio:
+
+Install Unsloth Studio (macOS, Linux, WSL)
+curl -fsSL https://unsloth.ai/install.sh | sh
+# Run unsloth studio
+unsloth studio -H 0.0.0.0 -p 8888
+# Then open http://localhost:8888 in your browser
+# Search for AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF to start chatting
+Install Unsloth Studio (Windows)
+irm https://unsloth.ai/install.ps1 | iex
+# Run unsloth studio
+unsloth studio -H 0.0.0.0 -p 8888
+# Then open http://localhost:8888 in your browser
+# Search for AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF to start chatting
+Using HuggingFace Spaces for Unsloth
+# No setup required
+# Open https://huggingface.co/spaces/unsloth/studio in your browser
+# Search for AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF to start chatting
+How to use AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF with Docker Model Runner:
+
+docker model run hf.co/AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF
+How to use AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF with Lemonade:
+
+Pull the model
+# Download Lemonade from https://lemonade-server.ai/
+lemonade pull AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF
+Run and chat with the model
+lemonade run user.Hy-MT1.5-1.8B-1.25bit-GGUF-{{QUANT_TAG}}
+List all available models
+lemonade list
+AngelSlim
+
+Dedicated to building a more intuitive, comprehensive, and efficient LLMs compression toolkit.
+📱 Android Demo   |    📣 Weights   |    ✒️ Sherry Paper (ACL 2026)   |    📖 Documentation   |    🤗 AngelSlim   |    💬 WeChat
+
+model_scores
+Hy-MT1.5-1.8B translation quality scores. Source: HY-MT1.5 Technical Report
+
+📣 Latest News
+[26/05/08] We have released STQ1_0 kernel for 1.25-bit model and given a PR to llama.cpp PR #22836 ! If you have any questions or suggestions for STQ_0, welcome to comment under the PR !🔥🔥🔥
+[26/04/29] We have released Hy-MT1.5-1.8B-2bit (574MB) and Hy-MT1.5-1.8B-1.25bit (440MB), on-device translation models supporting 33 languages, with both weights and GGUF formats available. We also have made an Android Demo for you to try out. We invite you to give it a spin! 🔥🔥🔥
+[26/02/09] We have released HY-1.8B-2Bit, 2-bit on-device large language model.
+[26/01/13] We have released v0.3. We support the training and deployment of Eagle3 for all-scale LLMs/VLMs/Audio models. And we released Sherry, the hardware-efficient 1.25-bit quantization algorithm [Paper] | [Code]
+For more detailed information, please refer to [AngelSlim] and [HY-MT]
+
+🌟 Hy-MT1.5-1.8B-1.25bit-GGUF Key Features
+World-Class Translation Quality Hy-MT1.5-1.8B-1.25bit is built upon the Hy-MT1.5-1.8B foundation model, a specialized translation model developed by Tencent Hunyuan Team through a holistic multi-stage training pipeline integrating MT-oriented pre-training, supervised fine-tuning, on-policy distillation, and reinforcement learning. The base model natively supports 33 languages, 5 dialects/minority languages, and 1,056 translation directions. With only 1.8B parameters, it comprehensively outperforms much larger open-source models (e.g., Tower-Plus-72B, Qwen3-32B) and mainstream commercial translation APIs (e.g., Microsoft Translator, Doubao Translator). For full details, please refer to the HY-MT1.5-1.8B and HY-MT1.5 Technical Report.
+
+Sherry: Extreme 1.25-bit Quantization This model employs Sherry (accepted at ACL 2026), a hardware-efficient ternary quantization framework. Sherry introduces a 3:4 fine-grained sparsity strategy: for every 4 model weights, the 3 most important are stored in 1-bit ({-1, +1}), while the remaining 1 is zeroed out. This packs 4 weights into just 5 bits, achieving an effective 1.25-bit width with power-of-two alignment, compressing the original 3.3GB FP16 model to just 440MB, with minimal accuracy loss.
+
+Sherry
+Sherry fine-grained sparsity: for every 4 weights, the 3 most important are stored in 1-bit, and the remaining 1 is zeroed out.
+
+On-Device Deployment for the Most Phones Paired with our custom STQ kernel designed specifically for mobile CPUs, the 1.25-bit model achieves perfect SIMD instruction set alignment. This means even ordinary phones with limited memory can run high-quality offline translation smoothly. No internet connection required, and your data never leaves the device.
+📈 Translation Benchmarks
+Performance comparison of different model sizes on the Flores-200 Chinese-Foreign mutual translation benchmark:
+
+flores_model_size
+Performance of different model sizes on the Flores-200 Chinese-Foreign mutual translation benchmark.
+
+⚡ Speed Demo
+FP16 (8x speed) vs. 1.25-bit speed comparison.
+
+fp16_vs_1.25bit
+Demo device: Snapdragon 888, 8GB RAM.
+
+📱 Demo
+We provide a ready-to-use Android demo APK for offline translation. The app features a background word extraction mode that works across any app on your phone — browse emails, webpages, or chat messages and get instant translations without switching apps. No network required, no data collection, one-time download for permanent use.
+
+Download Demo:
+
+https://huggingface.co/AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF/resolve/main/Hy-MT-demo.apk
+
+Translation Demo
+app_demo
+Demo device: Snapdragon 865, 8GB RAM.
+
+Background Word Extraction Mode
+demo2
+Demo device: Snapdragon 7+ Gen 2, 16GB RAM.
+
+💻 Deployment
+❕❕ This gguf depends on our STQ kernel, which is released at PR #22836.
+
+Clone llama.cpp
+git clone https://github.com/ggml-org/llama.cpp.git
+
+Enter the llama.cpp folder
+cd llama.cpp
+
+Fetch and check out the PR branch
+git fetch origin pull/22836/head:pr-22836-stq_0
+git checkout pr-22836-stq_0
+
+Build llama.cpp
+cmake -B build
+cmake --build build --config Release
+
+Download the GGUF model
+pip install huggingface_hub
+huggingface-cli download AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF \
+    --local-dir model_zoo/Hy-MT1.5-1.8B-1.25bit-GGUF
+
+Run a completion example
+The prompt format can be viewed at HY-MT1.5-1.8B
+
+./build/bin/llama-completion \
+  --model model_zoo/Hy-MT1.5-1.8B-1.25bit-GGUF/Hy-MT1.5-1.8B-1.25bit.gguf \
+  -p "Translate the following segment into Chinese, without additional explanation：Hello" \
+  --jinja \
+  -ngl 0 \
+  -n 64 -st 
+
+Run the llama.cpp benchmark
+./build/bin/llama-bench -m model_zoo/Hy-MT1.5-1.8B-1.25bit-GGUF/Hy-MT1.5-1.8B-1.25bit.gguf -ngl 0
+
+📥 Download Links
+1.25-bit model weights: https://huggingface.co/AngelSlim/Hy-MT1.5-1.8B-1.25bit
+1.25-bit model GGUF: https://huggingface.co/AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF
+2-bit model weights: https://huggingface.co/AngelSlim/Hy-MT1.5-1.8B-2bit
+2-bit model GGUF: https://huggingface.co/AngelSlim/Hy-MT1.5-1.8B-2bit-GGUF
+Demo APK: https://huggingface.co/AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF/resolve/main/Hy-MT-demo.apk
+📄 Technical Reports
+HY-MT1.5 Technical Report: https://arxiv.org/abs/2512.24092
+Sherry Paper (ACL 2026): https://arxiv.org/abs/2601.07892
+AngelSlim Technical Report: https://arxiv.org/abs/2602.21233
+📝 License
+The code for this project is open-sourced under the License for AngelSlim.
+
+🔗 Citation
+@misc{huang2026sherry,
+      title={Sherry: Hardware-Efficient 1.25-Bit Ternary Quantization via Fine-grained Sparsification}, 
+      author={Hong Huang and Decheng Wu and Qiangqiang Hu and Guanghua Yu and Jinhai Yang and Jianchen Zhu and Xue Liu and Dapeng Wu},
+      year={2026},
+      eprint={2601.07892},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2601.07892}, 
+}
+
+@article{angelslim2026,
+  title={AngelSlim: A more accessible, comprehensive, and efficient toolkit for large model compression},
+  author={Hunyuan AI Infra Team},
+  journal={arXiv preprint arXiv:2602.21233},
+  year={2026}
+}
+
+@misc{zheng2025hymt,
+      title={HY-MT1.5 Technical Report}, 
+      author={Mao Zheng and Zheng Li and Tao Chen and Mingyang Song and Di Wang},
+      year={2025},
+      eprint={2512.24092},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2512.24092}, 
+}
+
+💬 Technical Discussion
+AngelSlim is continuously iterating and new features will be released soon. If you have any questions or suggestions, please open an issue on GitHub Issues or join our WeChat discussion group.
+Downloads last month
+7,764
+GGUF
+Model size
+2B params
+Architecture
+hunyuan-dense
+
+Chat template
+
+Hardware compatibility
+Log In
+to add your hardware
+We're not able to determine the quantization variants.
+
+View all variants
+Inference Providers
+NEW
+Translation
+This model isn't deployed by any Inference Provider.
+🙋
+Ask for provider support
+Model tree for
+AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF
+Base model
+
+tencent/HY-MT1.5-1.8B
+Finetuned
+AngelSlim/Hy-MT1.5-1.8B-1.25bit
+Quantized
+(2)
+this model
+Space using
+AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF
+1
+🚀
+wong1234/hy-mt15-gguf-cpu
+Collection including
+AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF
+Hy Low-bit model
+Collection
+6 items
+•
+Updated 13 days ago
+•
+11
+Papers for
+AngelSlim/Hy-MT1.5-1.8B-1.25bit-GGUF
+AngelSlim: A more accessible, comprehensive, and efficient toolkit for large model compression
+Paper
+•
+2602.21233
+•
+Published Feb 7
+•
+3
+Sherry: Hardware-Efficient 1.25-Bit Ternary Quantization via Fine-grained Sparsification
+Paper
+•
+2601.07892
+•
+Published Jan 12
+•
+4
+HY-MT1.5 Technical Report
+Paper
+•
+2512.24092
+•
+Published Dec 30, 2025
+•
+5
+System theme
+TOS
+Privacy
+About
+Careers
+Models
+Datasets
+Spaces
+Pricing
+Docs

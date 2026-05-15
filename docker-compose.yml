@@ -1,0 +1,19 @@
+services:
+  hy-mt:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        # Optional: set your HuggingFace token if needed
+        HF_TOKEN: ${HF_TOKEN:-}
+    image: hy-mt1.5-1.8b:latest
+    container_name: hy-mt-server
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    # For better performance, optionally limit/grant CPU resources:
+    # deploy:
+    #   resources:
+    #     limits:
+    #       cpus: '4'
+    #       memory: 2G
